@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RotateNormalController">
+            <connections>
+                <outlet property="imageView" destination="HKb-B5-Y9l" id="s4g-dl-Fs9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QrZ-yn-w4k">
+                    <rect key="frame" x="0.0" y="547" width="375" height="120"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Hs-SK-mck">
+                            <rect key="frame" x="50" y="53" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="left"/>
+                            <connections>
+                                <action selector="leftRotate:" destination="-1" eventType="touchUpInside" id="Rc3-We-7q1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zqm-a8-OnT">
+                            <rect key="frame" x="103" y="53" width="32" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="right"/>
+                            <connections>
+                                <action selector="rightRotate:" destination="-1" eventType="touchUpInside" id="I4W-gy-wkp"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yQ-Ec-5x9">
+                            <rect key="frame" x="172" y="53" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="v"/>
+                            <connections>
+                                <action selector="flipVertical:" destination="-1" eventType="touchUpInside" id="AJg-FA-CXz"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZz-EY-7an">
+                            <rect key="frame" x="247" y="53" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="h"/>
+                            <connections>
+                                <action selector="flipHorizontal:" destination="-1" eventType="touchUpInside" id="cIH-Mu-nWM"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O03-iV-eSg">
+                            <rect key="frame" x="308" y="53" width="37" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="close"/>
+                            <connections>
+                                <action selector="closeClick:" destination="-1" eventType="touchUpInside" id="uVB-kA-Bsy"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="3B7-gD-zAm"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lgl-Ps-VIV">
+                    <rect key="frame" x="0.0" y="20" width="375" height="527"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HKb-B5-Y9l">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="527"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="HKb-B5-Y9l" firstAttribute="leading" secondItem="Lgl-Ps-VIV" secondAttribute="leading" id="AyH-kU-Te3"/>
+                        <constraint firstAttribute="bottom" secondItem="HKb-B5-Y9l" secondAttribute="bottom" id="Dd3-Nu-YxS"/>
+                        <constraint firstAttribute="trailing" secondItem="HKb-B5-Y9l" secondAttribute="trailing" id="S72-SH-0gw"/>
+                        <constraint firstItem="HKb-B5-Y9l" firstAttribute="top" secondItem="Lgl-Ps-VIV" secondAttribute="top" id="etK-O4-2i1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Lgl-Ps-VIV" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="5Oq-lN-dI8"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="QrZ-yn-w4k" secondAttribute="trailing" id="7Hz-co-DSK"/>
+                <constraint firstItem="QrZ-yn-w4k" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="BDn-JT-Kxr"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Lgl-Ps-VIV" secondAttribute="trailing" id="Eeb-Kt-Yqp"/>
+                <constraint firstItem="Lgl-Ps-VIV" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="ZHC-Gp-iCV"/>
+                <constraint firstItem="QrZ-yn-w4k" firstAttribute="top" secondItem="Lgl-Ps-VIV" secondAttribute="bottom" id="kGW-UV-O1g"/>
+                <constraint firstItem="QrZ-yn-w4k" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="tJP-pQ-7L9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+</document>
